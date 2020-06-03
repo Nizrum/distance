@@ -97,6 +97,7 @@ body {
 
 .user-avatar {
     margin-right: 8px;
+    border-radius: 50%;
 }
 
 .user-name {
