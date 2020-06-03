@@ -96,8 +96,11 @@ body {
 }
 
 .user-avatar {
+    width: 32px;
+    height: 32px;
     margin-right: 8px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .user-name {
@@ -256,6 +259,7 @@ body {
     width: 100%;
     color: #8c8c8c;
     outline: none;
+    overflow-x: hidden;
 }
 
 .tag {
