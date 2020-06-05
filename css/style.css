@@ -681,6 +681,25 @@ body {
 
     .m-menu {
         display: flex;
+        position: relative;
+    }
+
+    .m-menu .line {
+        transition: all 0.3s;
+    }
+
+    .m-menu.active .line:nth-child(1) {
+        transform: rotate(45deg);
+        position: absolute;
+    }
+
+    .m-menu.active .line:nth-child(2) {
+        display: none;
+    }
+
+    .m-menu.active .line:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
     }
 
     .search-input {
