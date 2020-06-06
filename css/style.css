@@ -37,6 +37,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     outline: none;
+    cursor: pointer;
 }
 
 .m-menu .line {
@@ -195,6 +196,7 @@ body {
     width: 192px;
     margin-top: 18px;
     margin-right: 12px;
+    z-index: 100;
 }
 
 .menu-sidebar .user-avatar {
@@ -593,7 +595,7 @@ body {
 }
 
 .concuria {
-    background-image: url('../img/concuria-logo.jpg');
+    background-image: url('../img/concuria-logo.png');
 }
 
 .ant-design {
@@ -654,12 +656,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 12px;
+    padding: 20px 20px;
 }
 
 .post-share-title li:nth-child(1) {
     display: flex;
     justify-content: flex-end;
+    padding: 8px;
 }
 
 .share-title-close {
@@ -682,11 +685,134 @@ body {
     position: relative;
 }
 
+.user-page {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-left: 24px;
+    margin-top: 16px;
+}
+
+.user-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.user-page-title {
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+}
+
+.user-page-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #D9D9D9;
+}
+
+.user-page-name {
+    font-size: 14px;
+    line-height: 22px;
+    color: #0050B3;
+}
+
+.user-page-content {
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.user-page-info {
+    margin-left: 12px;
+}
+
+.user-page-info-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: #8C8C8C;
+}
+
+.user-page-info-item span {
+    margin-left: 4px;
+}
+
+.info-item-counter {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #595959;
+    background: #F5F5F5;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-left: 6px;
+}
+
+.user-page-footer {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-page-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-page-tab:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.user-page-tab:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.user-page-tab {
+    padding: 8px 24px;
+    border: 1px solid #D9D9D9;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.user-page-tab.active {
+    color: #1890ff;
+    border-color: #1890FF;
+}
+
+.user-page-block {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.user-page-number {
+    font-size: 24px;
+    line-height: 32px;
+    color: #262626;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.user-page-explanation {
+    font-size: 14px;
+    line-height: 22px;
+    color: #8C8C8C;
+}
+
+
 
 @media (max-width: 1250px) {
     .container {
-        justify-content: flex-start;
-        width: 95%;
+        width: 800px;
     }
     
     .right-sidebar {
@@ -694,7 +820,7 @@ body {
     }
 
     .header-block {
-        width: 95%;
+        width: 800px;
     }
 }
 
@@ -709,6 +835,14 @@ body {
 }
 
 @media (max-width: 840px) {
+    .container {
+        width: 600px;
+    }
+
+    .header-block {
+        width: 620px;
+    }
+
     .menu-sidebar {
         position: fixed;
         padding-top: 12px;
@@ -753,5 +887,19 @@ body {
 
     .search-input {
         width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 90%;
+    }
+
+    .heade-block {
+        width: 90%;
+    }
+
+    .search {
+        display: none;
     }
 }
