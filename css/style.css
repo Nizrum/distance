@@ -852,6 +852,12 @@ body {
     color: #8C8C8C;
 }
 
+.section-placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+
 
 
 @media (max-width: 1250px) {

@@ -4,9 +4,9 @@ const lines = document.querySelectorAll('.line');
 const postButtonShare = document.querySelectorAll('.post-button-share');
 const postShareTitle = document.querySelectorAll('.post-share-title');
 const shareTitleClose = document.querySelectorAll('.share-title-close');
-const buttonMore = document.querySelector('.nav-more');
-const buttonMoreIcon = document.querySelector('.nav-more svg');
-const buttonMoreText = document.querySelector('.nav-more span');
+const buttonMoreMenu = document.querySelector('.nav-more-menu');
+const buttonMoreMenuIcon = document.querySelector('.nav-more-menu svg');
+const buttonMoreMenuText = document.querySelector('.nav-more-menu span');
 const navGroupHidden = document.querySelector('.nav-group-hidden');
 
 menuBtn.addEventListener('click', function () {
@@ -26,13 +26,13 @@ for (let i = 0; i < postButtonShare.length; i++) {
     });
 }
 
-buttonMore.addEventListener('click', function () {
+buttonMoreMenu.addEventListener('click', function () {
     navGroupHidden.classList.toggle('hide');
-    if (buttonMoreText.textContent === 'Свернуть...') {
-        buttonMoreText.textContent = 'Ещё...';
-        buttonMoreIcon.style.transform = 'rotate(0)';
+    if (buttonMoreMenuText.textContent === 'Свернуть...') {
+        buttonMoreMenuText.textContent = 'Ещё...';
+        buttonMoreMenuIcon.style.transform = 'rotate(0)';
     } else {
-        buttonMoreText.textContent = 'Свернуть...';
-        buttonMoreIcon.style.transform = 'rotate(180deg)';
+        buttonMoreMenuText.textContent = 'Свернуть...';
+        buttonMoreMenuIcon.style.transform = 'rotate(180deg)';
     }
 });
