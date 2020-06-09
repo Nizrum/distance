@@ -8,6 +8,8 @@ const buttonMoreMenu = document.querySelector('.nav-more-menu');
 const buttonMoreMenuIcon = document.querySelector('.nav-more-menu svg');
 const buttonMoreMenuText = document.querySelector('.nav-more-menu span');
 const navGroupHidden = document.querySelector('.nav-group-hidden');
+const tabs = document.querySelectorAll('.user-page-tab');
+const tabsBlocks = document.querySelectorAll('.user-page-block');
 
 menuBtn.addEventListener('click', function () {
     menu.classList.toggle('active');
@@ -36,3 +38,24 @@ buttonMoreMenu.addEventListener('click', function () {
         buttonMoreMenuIcon.style.transform = 'rotate(180deg)';
     }
 });
+
+tabs.forEach(item => {
+    item.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const id = item.getAttribute('href');
+        
+        tabs.forEach(child => {
+            child.classList.remove('user-page-tab-active');
+        });
+
+        tabsBlocks.forEach(child => {
+            child.classList.remove('user-page-block-active');
+        });
+
+        item.classList.add('user-page-tab-active');
+        document.querySelector(id).classList.add('user-page-block-active');
+    });
+});
+
+tabs[0].click();
